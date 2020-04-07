@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  run-test:
+    image: docker-registry.lge.com/project/webos/webos-tv-unittest:gtest
+    volumes:
+      - ${HOME}:/root
+      - ./:/work

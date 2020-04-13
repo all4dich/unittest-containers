@@ -6,7 +6,8 @@ services:
       - CHIP=o20
       - BRANCH=@webos4tv
       - BUILD_NUMBER=226
-    image: docker-registry.lge.com/project/webos/webos-tv-unittest:x86-test
+    image: docker-registry.lge.com/project/webos/webos-tv-unittest/x86-test
+    user: "run-test"
     volumes:
       - ${HOME}/.ssh:/root/.ssh
       - ${HOME}/.gitconfig:/root/.gitconfig

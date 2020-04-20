@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  run-test:
+    environment:
+      - CHIP=o20
+      - BRANCH=@webos4tv
+      - BUILD_NUMBER=226
+    image: docker-registry.lge.com/project/webos/webos-tv-unittest/base
+    user: "run-test"
+    volumes:
+      - ${HOME}:/root
+      - ./:/work
+      - /starfish:/starfish
